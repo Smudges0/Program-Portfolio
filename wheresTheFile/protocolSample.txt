@@ -1,0 +1,59 @@
+# Checkout COMPLETE
+00 <# bytes>:<projectName> <EOF>
+# Response
+00 <# bytes>:<.manifest> <# bytes>:<file name 1> <# bytes>:<file 1>...<EOF>
+01 <Error message> <EOF>
+
+# Commit COMPLETE
+09 <# bytes>:<Project Name> <# bytes>:<.commit file> <EOF>
+# Response
+00 <EOF>
+01 <Error message> <EOF>
+
+# Push
+01 <# bytes>:<Project Name> <# bytes>:<.commit file> <# bytes>:<file name 1> <# bytes>:<file 1>...<EOF>
+# Response
+00 <EOF>
+01 <Error message> <EOF>
+
+# Update COMPLETE
+02 <# bytes>:<Project Name> <EOF>
+# Response
+00 <# bytes>:<.manifest> <EOF>
+01 <Error message> <EOF>
+
+# Upgrade COMPLETE
+03 <# bytes>:<projectName> <# bytes>:<file name 1> <# bytes>:<file name 2>...<EOF> 
+# Response
+00 <# bytes>:<file name 1> <# bytes>:<file1>...<EOF>
+01 <Error message> <EOF>
+
+# Create COMPLETE
+04 <# bytes>:<projectName> <EOF>
+# Response
+00 <# bytes>:<.manifest> <EOF>
+01 <Error message> <EOF>
+
+# Destroy COMPLETE
+05 <# bytes>:<projectName> <EOF>
+# Response
+00 <EOF>
+01 <Error message> <EOF>
+
+# Current Version COMPLETE
+06 <# bytes>:<projectName> <EOF>
+# Response
+00 <# bytes>:<.manifest> <EOF>
+01 <Error message> <EOF>
+
+# History
+07 <# bytes>:<projectName> <EOF>
+# Response
+00 <# bytes>:<.history> <EOF>
+01 <Error message> <EOF>
+
+# Rollback COMPLETE
+08 <# bytes>:<projectName> <versionNumber> <EOF>
+# Response
+00 <EOF>
+01 <Error message> <EOF>

@@ -1,0 +1,147 @@
+brian@Icicle:~/github_simon/cs416-operating-systems/project2/benchmarks$ make clean; make; ./genRecord.sh ; 
+
+./external_cal 6; ./parallel_cal 6; ./vector_multiply 6
+
+#---------------------------------------------------------------------------------------
+# Tested with settings: 
+# Threads: 6
+# QUANTA_TIME_USECS 200000 // 200K Microseconds = 200 milliseconds
+#---------------------------------------------------------------------------------------
+running time: 420 micro-seconds
+sum is: 712267805
+verified sum is: 712267805
+running time: 2217 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 37 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 473 micro-seconds
+sum is: -1094795900
+verified sum is: -1094795900
+running time: 2118 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 290 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 508 micro-seconds
+sum is: -629275805
+verified sum is: -629275805
+running time: 2136 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 304 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+
+#---------------------------------------------------------------------------------------
+# Tested with settings: 
+# Threads: 6
+# QUANTA_TIME_USECS 100000 // 100K Microseconds = 100 milliseconds
+#---------------------------------------------------------------------------------------
+
+running time: 479 micro-seconds
+sum is: 79470340
+verified sum is: 79470340
+running time: 2072 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 43 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 469 micro-seconds
+sum is: -1909351000
+verified sum is: -1909351000
+running time: 2080 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 37 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 479 micro-seconds
+sum is: -1334062712
+verified sum is: -1334062712
+running time: 2210 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 331 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+#---------------------------------------------------------------------------------------
+# Tested with settings: 
+# Threads: 6
+# QUANTA_TIME_USECS 20000 // 20K Microseconds = 20 milliseconds
+#---------------------------------------------------------------------------------------
+running time: 405 micro-seconds
+sum is: -296498148
+verified sum is: -296498148
+running time: 1984 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 41 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 420 micro-seconds
+sum is: -1755169063
+verified sum is: -1755169063
+running time: 2046 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 48 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 483 micro-seconds
+sum is: 2115939617
+verified sum is: 2115939617
+running time: 2051 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 42 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+#---------------------------------------------------------------------------------------
+# Tested with settings: 
+# Threads: 6
+# QUANTA_TIME_USECS 5000 // 5K Microseconds = 5 milliseconds
+#---------------------------------------------------------------------------------------
+running time: 483 micro-seconds
+sum is: -438866252
+verified sum is: -438866252
+running time: 2277 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 53 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 480 micro-seconds
+sum is: 1693623803
+verified sum is: 1693623803
+running time: 2266 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 45 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 494 micro-seconds
+sum is: 117246688
+verified sum is: 117246688
+running time: 2221 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 39 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+

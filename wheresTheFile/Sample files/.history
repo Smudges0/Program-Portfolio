@@ -1,0 +1,13 @@
+0
+1
+A 1 /subdirectory/file1 1375817515
+A 1 /file2 14579151905
+A 1 /file3 47918198
+A 1 /file4 58159819
+2
+M 2 /subdirectory/file1 1375817515
+M 2 /file2 14579151905
+3
+M 2 /file3 47918198
+4
+D 1 /file4 58159819

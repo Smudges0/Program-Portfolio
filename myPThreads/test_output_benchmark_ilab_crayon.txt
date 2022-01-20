@@ -1,0 +1,40 @@
+ssb170@crayon:~/cs416-operating-systems/project2/benchmarks$ make clean; make; ./genRecord.sh ;
+
+./external_cal 6; ./parallel_cal 6; ./vector_multiply 6
+
+#---------------------------------------------------------------------------------------
+# Tested with settings: 
+# Threads: 6
+# QUANTA_TIME_USECS 50000 // 50K Microseconds = 50 milliseconds
+#---------------------------------------------------------------------------------------
+running time: 428 micro-seconds
+sum is: 1235107681
+verified sum is: 1235107681
+running time: 1907 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 34 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 429 micro-seconds
+sum is: 1235107681
+verified sum is: 1235107681
+running time: 1900 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 33 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+running time: 426 micro-seconds
+sum is: 1235107681
+verified sum is: 1235107681
+running time: 1906 micro-seconds
+sum is: 83842816
+verified sum is: 83842816
+running time: 35 micro-seconds
+res is: 631560480
+verified res is: 631560480
+
+

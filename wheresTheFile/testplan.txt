@@ -1,0 +1,93 @@
+testcases.txt
+====================
+
+Directory structure for testing:
+---------------------------------
+./Asst3/Client/WTF		: Client executable
+./Asst3/Server/WTFserver	: Server executable
+
+
+./Asst3/Client			: Root directory for client-side archives/repositories
+./Asst3/Client/myProject2	: Test client project directory
+./Asst3/Client/myProject2/.manifest
+./Asst3/Client/myProject2/test3.txt
+./Asst3/Client/myProject2/subdir1/test2.txt
+./Asst3/Client/myProject2/subdir1/subdir2/test1.txt
+
+
+./Asst3/Server			: Root directory for server-side archives/repositories
+./Asst3/Client/.history
+./Asst3/Client/myProject1	: Test server project directory
+./Asst3/Client/myProject1/myProjectv0/.manifest
+./Asst3/Client/myProject1/myProjectv0/test3.txt
+./Asst3/Client/myProject1/myProjectv0/subdir1/test2.txt
+./Asst3/Client/myProject1/myProjectv0/subdir1/subdir2/test2.txt
+./Asst3/Client/myProject1/myProjectv1/.manifest
+./Asst3/Client/myProject1/myProjectv1/test3.txt
+./Asst3/Client/myProject1/myProjectv1/subdir1/test2.txt
+./Asst3/Client/myProject1/myProjectv1/subdir1/subdir2/test2.txt
+
+
+Server-side testing:
+---------------------
+The server side was developed and tested independently of the client side during development using
+a program "testClient.c".
+
+This program has a set of test messages which can be sent to the server, and the program will output the response from the server.
+
+We also tested the server with multiple simultaneous requests from different clients.  
+
+We also tested the project-specific mutex locking behavior with multiple clients updating the same project.
+
+The following is the set of sample test messages and expected responses:
+
+
+  if (!strcmp(cmd, "04")) // Create project
+  {
+    message = "0410:myProject2";
+  }
+  else if (!strcmp(cmd, "091")) // Commit #1
+  {
+    message = "0910:myProject289:1\nA 1 ./subdir1/subdir2/test1.txt 1234\nA 1 ./subdir1/test2.txt 5678\nA 1 ./test3.txt 9012\n";
+  }
+  else if (!strcmp(cmd, "011")) // Push #1
+  {
+    message = "0110:myProject289:1\nA 1 ./subdir1/subdir2/test1.txt 1234\nA 1 ./subdir1/test2.txt 5678\nA 1 ./test3.txt 9012\n27:./subdir1/subdir2/test1.txt9:test1Data19:./subdir1/test2.txt9:test2Data11:./test3.txt9:test3Data"; //push
+  }
+  else if (!strcmp(cmd, "08")) // Rollback to v0
+  {
+    message = "0810:myProject20";
+  }
+  else if (!strcmp(cmd, "07")) // History
+  {
+    message = "0710:myProject2";
+  }
+  else if (!strcmp(cmd, "092")) // Commit #2
+  {
+    message = "0910:myProject289:2\nM 2 ./subdir1/subdir2/test1.txt 1234\nM 2 ./subdir1/test2.txt 5678\nM 2 ./test3.txt 9012\n";
+  }
+  else if (!strcmp(cmd, "012")) // Push #2
+  {
+    message = "0110:myProject289:2\nM 2 ./subdir1/subdir2/test1.txt 1234\nM 2 ./subdir1/test2.txt 5678\nM 2 ./test3.txt 9012\n27:./subdir1/subdir2/test1.txt9:test1Data19:./subdir1/test2.txt9:test2Data11:./test3.txt9:test3Data";
+  }
+  else if (!strcmp(cmd, "05")) // Destroy
+  {
+    message = "0510:myProject2";
+  }
+  else if (!strcmp(cmd, "00")) // Checkout
+  {
+    message = "0010:myProject2";
+  }
+  else if (!strcmp(cmd, "06")) // Current version
+  {
+    message = "0610:myProject2";
+  }
+
+
+Client-side testing:
+----------------------
+
+The client side was tested manually, connecting to the actual WTFserver.
+
+Each command was tested manually.
+
